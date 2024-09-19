@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess</title>
+  </head>
+  <body>
+    <div>
+      <label for="guessInput">Enter the number:</label>
+      <input type="text" id="guessInput" placeholder="Enter the number" />
+      <label id="mylabel"></label>
+    </div>
+    <div>
+      <button type="button" id="submit">Check</button>
+    </div>
+
+    <script>
+      document.getElementById("submit").onclick = function () {
+        const inputValue = document.getElementById("guessInput").value // Correctly retrieve the input value
+        document.getElementById(
+          "mylabel"
+        ).textContent = `You entered: ${inputValue}` // Set the text content of the label
+      }
+    </script>
+  </body>
+</html>

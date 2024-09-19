@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <a href="index.html">Home</a>
+    <label for="countLabel" id="countLabel">0</label>
+    <div id="btnContainer">
+      <button id="increaseBtn" class="buttons">Increase</button>
+      <button id="restBtn" class="buttons">Reset</button>
+      <button id="decreseBtn" class="buttons">Decrease</button>
+    </div>
+    <script>
+      const increaseBtn = document.getElementById("increaseBtn")
+      const restBtn = document.getElementById("restBtn")
+      const decreseBtn = document.getElementById("decreseBtn")
+      const countLabel = document.getElementById("countLabel")
+
+      let count = 0
+
+      increaseBtn.onclick = function () {
+        count = Math.max(count + 1, 0)
+        countLabel.textContent = count
+        //   console.log(count)
+      }
+
+      decreseBtn.onclick = function () {
+        count--
+        document.getElementById("restBtn").disabled = count < 0
+        countLabel.textContent = count >= 0 ? count : 0
+        //   console.log(count)
+      }
+
+      restBtn.onclick = function () {
+        count = 0
+        countLabel.textContent = count
+        //   console.log(count)
+      }
+
+      const min1 = 50
+      const max1 = 100
+
+      let rondomNum = Math.floor(Math.random() * (max - min)) + min
+      // console.log(rondomNum)
+    </script>
+  </body>
+</html>
