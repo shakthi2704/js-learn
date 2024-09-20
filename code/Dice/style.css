@@ -1,0 +1,21 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+}
+button {
+  color: white;
+  background-color: hsl(254, 91%, 52%);
+  padding: 10px;
+  border: navy;
+  border-radius: 5px;
+}
+#diceInput {
+  text-align: center;
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 5px;
+}
